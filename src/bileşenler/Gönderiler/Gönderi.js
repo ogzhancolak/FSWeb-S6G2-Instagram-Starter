@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Yorumlar from '../Yorumlar/Yorumlar';
 import BeğenBölümü from './BeğenBölümü';
 import GönderiBaşlığı from './GönderiBaşlığı';
@@ -23,7 +23,7 @@ const Gönderi = props => {
       {/* BeğenBölümü düzgün çalışması için ihtiyaç duyduğu tüm proplara sahip mi? */}
       <BeğenBölümü gonderiyiBegen={() => gonderiyiBegen(gönderi.id)}/>
       {/* Yorumlar da proplara dikkat istiyor! */}
-      <Yorumlar />
+      <Yorumlar yorumlar={gönderi.comments}/>
     </div>
   );
 };
